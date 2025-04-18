@@ -9,7 +9,7 @@ WEEKDAYS = ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چه
 class ToDoApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("🧩 To-Do List با تب‌های هفتگی")
+        self.root.title("To-Do List سجاد بزرا")
         self.root.geometry("650x550")
         self.root.configure(bg="#f4f4f4")
 
@@ -35,11 +35,11 @@ class ToDoApp:
             btn_frame = tk.Frame(frame, bg="#fefefe")
             btn_frame.pack(pady=10)
 
-            tk.Button(btn_frame, text="➕ اضافه", width=12, bg="#4CAF50", fg="white",
+            tk.Button(btn_frame, text="اضافه", width=12, bg="#4CAF50", fg="white",
                       font=("Vazirmatn", 11), command=lambda i=i: self.add_task(i)).grid(row=0, column=0, padx=5)
-            tk.Button(btn_frame, text="🗑 حذف", width=12, bg="#f44336", fg="white",
+            tk.Button(btn_frame, text="حذف", width=12, bg="#f44336", fg="white",
                       font=("Vazirmatn", 11), command=lambda i=i: self.delete_task(i)).grid(row=0, column=1, padx=5)
-            tk.Button(btn_frame, text="✅ وضعیت", width=12, bg="#2196F3", fg="white",
+            tk.Button(btn_frame, text="تغییر وضعیت", width=12, bg="#2196F3", fg="white",
                       font=("Vazirmatn", 11), command=lambda i=i: self.toggle_done(i)).grid(row=0, column=2, padx=5)
 
         self.notebook.bind("<<NotebookTabChanged>>", self.on_tab_changed)
